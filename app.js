@@ -6,13 +6,21 @@ let cidades = [
     {"id": 5, "cidades": "Fortaleza", "estado": "CE", "populacao: 2.574.412}
 ]
 
-
+document.getElementById('btnMudaFundo').addEventListener('click', mudaFundo)
 function mudaFundo() {
     let cor = document.getElementById ('corFundo').value /*erro confirguração cor , pode ser as aspas*/
 document.body.style.backgroundColor = cor
 }
 
+document.getElementById('btnCarregaDados').addEventListener('click', carregaDados)
 function carregaDados() {
-   let ulCidades = document.getElementById('ulCidades')
-   ulCidades.innerHTML = '<li>Nova Yorque</li>' 
+   let ulCidades = document.getElementById('ulCidades'); /*erro confirguração cor , pode ser as aspas*/
+   strTextoHTML  = '';
+
+   for (let i = 0; i < cidades.length; i++) {
+   let cidade = cidades[i];
+    strTextoHTML  += `<li>${cidade.cidade} - ${cidade.estado}</li>`/*erro confirguração cor , pode ser as aspas*/
+   }
+
+   ulCidades.innerHTML = strTextoHTML; 
 }
