@@ -1,1 +1,4 @@
-document.body.style.backgroundColor = 'yellow' /*erro confirguração corr*/
+function mudaFundo() {
+    let cor = document.getElementById(´corFundo´).value /*erro confirguração cor , pode ser as aspas*/
+style.backgroundColor = cor  
+}
