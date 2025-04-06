@@ -1,0 +1,1 @@
+document.body.style.backgroundColor = 'yellow' /*erro confirguração corr*/
